@@ -566,17 +566,6 @@ footer {
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
 }
 
-#program .program-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(180deg, #ff8800, #ffb347);
-    border-radius: 4px 0 0 4px;
-}
-
 #program .program-card::after {
     content: counter(day-counter, decimal-leading-zero);
     position: absolute;
