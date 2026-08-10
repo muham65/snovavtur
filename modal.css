@@ -1,0 +1,234 @@
+/* ===== Модальное окно заявки ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(16, 16, 16, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+  width: min(540px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fbf8f3;
+  border-radius: 28px;
+  padding: 36px 34px 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  background: #ff8800;
+  color: white;
+}
+
+.modal h2 {
+  font-family: "Coda", system-ui;
+  font-size: 30px;
+  color: #151515;
+  margin-bottom: 8px;
+  padding-right: 44px;
+}
+
+.modal-sub {
+  font-family: "Comme", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+#bookingForm label {
+  display: block;
+  margin-bottom: 16px;
+  font-family: "Comme", sans-serif;
+}
+
+#bookingForm label > span {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+  width: 100%;
+  font-family: "Comme", sans-serif;
+  font-size: 15px;
+  color: #222;
+  background: white;
+  border: 1px solid #e4ddd3;
+  border-radius: 14px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+  border-color: #ff8800;
+  box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.15);
+}
+
+#bookingForm textarea {
+  resize: vertical;
+}
+
+.modal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.modal-submit {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8800, #ffb347);
+  color: white;
+  font-family: "Coda", system-ui;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 14px 30px rgba(255, 136, 0, 0.3);
+}
+
+.modal-submit:hover {
+  transform: translateY(-2px);
+}
+
+.modal-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
+.modal-error {
+  display: none;
+  margin-bottom: 14px;
+  color: #d0342c;
+  font-family: "Comme", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.modal-error.show {
+  display: block;
+}
+
+.modal-success {
+  display: none;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(46, 160, 67, 0.1);
+  color: #1e7a2e;
+  font-family: "Comme", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.modal-success.show {
+  display: block;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.hero-actions a {
+  margin-top: 0;
+}
+
+.hero-actions a.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: none;
+  color: white;
+}
+
+.hero-actions a.btn-outline:hover {
+  background: white;
+  border-color: white;
+  color: #ff8800;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.cta-actions a {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .modal {
+    padding: 26px 20px 24px;
+  }
+  .modal-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-actions,
+  .cta-actions {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-actions a,
+  .cta-actions a {
+    width: 100%;
+  }
+}

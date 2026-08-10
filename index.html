@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnovaVtur — туры по Дагестану</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comme:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <a href="#hero">SnovaVtur</a>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-div1">
+            <a href="#about">о нас</a>
+            <a href="#turi">туры</a>
+            <a href="#questions">вопросы</a>
+            <a href="#footer">контакты</a>
+            <a href="#" data-booking-open>заявка</a>
+        </div>
+        <div class="header-div2">
+            <a href="https://wa.me/79894733754" target="_blank"><img src="img/Whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://t.me/Gabbar_Han" target="_blank"><img src="img/Telegram.png" alt="Telegram"></a>
+            <a href="https://max.ru/u/f9LHodD0cOI4b3SwYSdN_EWwCpvfoghLmBJbnFuvf1nrCDXVqdGEyd-Ysb4" target="_blank"><img src="img/max.png" alt="Max"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <img src="img/горы.png" class="hero-bg" alt="Горы Дагестана">
+            <div class="hero-content">
+                <p class="hero-tag">авторские поездки</p>
+                <h3>красивый</h3>
+                <h4>ДАГЕСТАН</h4>
+                <p class="hero-subtitle">Горы, море, древние города и маршруты, которые запоминаются надолго.</p>
+                <div class="hero-actions">
+                    <a href="#turi">смотреть туры</a>
+                    <a href="#" class="btn-outline" data-booking-open>оставить заявку</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-heading">
+                <p>почему выбирают нас</p>
+                <h2>SnovaVtur — это не просто туры</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-card about-card-large">
+                    <img src="img/сарыкум.png" class="about-img1" alt="Сарыкум">
+                </div>
+                <div class="about-text">
+                    <h1>Путешествия, где всё продумано</h1>
+                    <h2>От экстремальных высот Сулакского каньона до уютных вечеров у горного очага — мы превращаем отдых в историю.</h2>
+                    <p>Дагестан — это место, где природа не просит разрешения, чтобы поразить вас своей мощью. Здесь каждый утренний туман над ущельем, каждый вкус горного меда и каждый взгляд на бесконечные хребты становятся частью вашей личной истории.</p>
+                    <p>Мы не перегружаем маршрут и не гоним по локациям ради галочки. Вместо этого вы получаете комфорт, красивые точки для фото и атмосферу, в которую хочется вернуться. Ваша история на вершинах Кавказа начинается здесь.</p>
+                    <div class="about-highlights">
+                        <span>комфорт</span>
+                        <span>эстетика</span>
+                        <span>впечатления</span>
+                    </div>
+                </div>
+                <div class="about-imgdiv">
+                    <img src="img/море и лунь.png" class="about-img2" alt="Море и Лунь">
+                    <img src="img/Чохские террасы.png" class="about-img3" alt="Чохские террасы">
+                </div>
+            </div>
+        </section>
+
+        <section class="turi" id="turi">
+            <div class="section-heading section-heading-light">
+                <p>наши маршруты</p>
+                <h2>туры и экскурсии по Дагестану</h2>
+            </div>
+            <div class="turi-intro">
+                <p>Выберите формат отдыха: многодневные туры для глубокого знакомства с регионом или короткие экскурсии для ярких впечатлений за один день.</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterSelection('all', this)">Все</button>
+                <button class="filter-btn" onclick="filterSelection('tour', this)">Туры</button>
+                <button class="filter-btn" onclick="filterSelection('excursion', this)">Экскурсии</button>
+            </div>
+            <div class="turi-grid">
+                <div class="card-1 tour">
+                    <a href="tour-yach-1.html"><img src="img/дербентт.png" alt="5 дневный классический тур"></a>
+                    <div class="card-text-1">
+                        <h1>5 дневный классический тур</h1>
+                        <p>Идеальный маршрут для первого знакомства с Дагестаном. Никакой спешки — только самые яркие локации в комфортном темпе. Подойдет всем, кто ценит отдых с душой и без лишней суеты</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 45 000p <br> <span>за человека</span></p>
+                        <a href="tour-yach-1.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 tour">
+                    <a href="tour-yach-2.html"><img src="img/Горах.png" alt="Экспесс-тур в Дагестан"></a>
+                    <div class="card-text-1">
+                        <h1>Экспесс-тур в Дагестан</h1>
+                        <p>Дагестан за выходные: концентрированный экспресс-тур для тех, кто ценит время. Увидите ключевые локации региона и полностью восстановите силы всего за 3 дня, не теряя рабочую неделю</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 30 000p <br> <span>за человека</span></p>
+                        <a href="tour-yach-2.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 tour">
+                    <a href="tour-yach-3.html"><img src="img/горыдагестана.png" alt="Горы и море, 7 дней"></a>
+                    <div class="card-text-1">
+                        <h1>Горы и море, 7 дней</h1>
+                        <p>Горные панорамы и морской бриз в одной поездке. Насыщенная программа по знаковым местам региона с комфортными ночевками в горах и у моря. Увидите всё самое важное и оставите время на личный отдых и безмятежность на пляже</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 50 000p <br> <span>за человека</span></p>
+                        <a href="tour-yach-3.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 tour">
+                    <a href="tour-yach-4.html"><img src="img/Язык тролля.png" alt="Молодёжный тур"></a>
+                    <div class="card-text-1">
+                        <h1>Молодёжный тур</h1>
+                        <p>Идеальный формат для компании единомышленников от 18 до 35 лет. В программе: захватывающий каньон, адреналиновый рафтинг, уютные вечерние игры и песни у костра</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 60 000p <br> <span>за человека</span></p>
+                        <a href="tour-yach-4.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-1.html"><img src="img/Лунь.png" alt="Дербент и экраноплан Лунь"></a>
+                    <div class="card-text-1">
+                        <h1>Дербент и экраноплан Лунь</h1>
+                        <p>1 ДЕНЬ. Мы увидим легендарный экраноплан, ставший символом ушедшей эпохи, и перенесемся в самое сердце истории — цитадель Нарын-Кала, чьи камни помнят дыхание древних цивилизаций</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 4 000p <br> <span>за человека</span></p>
+                        <a href="ex-yach-1.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-3.html"><img src="img/Башни Гоора.png" alt="Гоор и Язык Тролля"></a>
+                    <div class="card-text-1">
+                        <h1>Гоор и Язык Тролля</h1>
+                        <p>1 ДЕНЬ. Места, где захватывает дух: прогуляйтесь по легендарному уступу над бездной, оцените неприступное величие древних башен Гоора и прикоснитесь к мистике заброшенных аулов Кахиба, застывших во времени</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 4 500p <br> <span>за человека</span></p>
+                        <a href="ex-yach-3.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-4.html"><img src="img/Хучнинский водопад.png" alt="Самурский лес и Хучнинский водопад"></a>
+                    <div class="card-text-1">
+                        <h1>Самурский лес и Хучнинский водопад</h1>
+                        <p>1 ДЕНЬ. Погрузитесь в единственные в России субтропики Самурского леса, исследуйте мистические стены крепости и зарядитесь энергией у живописного Хучнинского водопада. Уникальный маршрут по самым зеленым и скрытым уголкам Дагестана.</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 5 500p <br> <span>за человека</span></p>
+                        <a href="ex-yach-4.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-5.html"><img src="img/Сулакский каньон.png" alt="Сулакский каньон и бархан Сарыкум"></a>
+                    <div class="card-text-1">
+                        <h1>Сулакский каньон и бархан Сарыкум</h1>
+                        <p>1 ДЕНЬ. Увидьте самый глубокий каньон Европы, промчитесь по бирюзовой воде на катерах, прогуляйтесь по пустыне Сарыкум и попробуйте ту самую знаменитую форель на углях. Квинтэссенция самых ярких впечатлений региона</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 4 300p <br> <span>за человека</span></p>
+                        <a href="ex-yach-5.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-6.html"><img src="img/Хунзах.png" alt="Хунзах, Матлас и водопады"></a>
+                    <div class="card-text-1">
+                        <h1>Хунзах, Матлас и водопады</h1>
+                        <p>1 ДЕНЬ. Уникальное сочетание природной мощи и эстетики: масштабные водопады, загадочные лабиринты Каменной чаши и «поэтические» виды Хунзахского плато. Маршрут для тех, кто ищет истинную красоту и величие гор</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 4 000p <br> <span>за человека</span></p>
+                        <a href="ex-yach-6.html">подробнее</a>
+                    </div>
+                </div>
+                <div class="card-1 excursion">
+                    <a href="ex-yach-7.html"><img src="img/Махачкала.png" alt="Экскурсия по Махачкале"></a>
+                    <div class="card-text-1">
+                        <h1>Экскурсия по Махачкале</h1>
+                        <p>1 ДЕНЬ. Почувствуйте ритм столицы: от захватывающих дух видов с плато Тарки-Тау до изящества белоснежных мечетей. Прогуляемся по знаковым музеям и пройдемся по тихим старым кварталам, чтобы увидеть настоящую, нетуристическую сторону дагестанского гостеприимства</p>
+                    </div>
+                    <div class="card-text-2">
+                        <p>от 3 500p <br> <span>за человека</span></p>
+                        <a href="ex-yach-7.html">подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions" id="questions">
+            <div class="questions-div1">
+                <div class="qs-text1">
+                    <h1>О турах SnovaVtur</h1>
+                    <p>SnovaVtur воплощает стремление показать Дагестан через призму комфорта и современной эстетики. Главная цель — дать путешественникам возможность по-настоящему прочувствовать атмосферу региона, а не просто ставить галочки в списке достопримечательностей. Каждый маршрут продумывается лично, сочетая величие кавказских гор, древнюю историю аулов и колорит местной культуры, чтобы вы ощущали себя здесь дорогим гостем</p>
+                    <p>Авторский подход исключает конвейерный туризм с бесконечной спешкой и шаблонами. Основной приоритет — качественные авторские локации, лучшие точки для панорамных фотографий и проверенные места для отдыха. Организация поездок, начиная от подбора транспорта и заканчивая выверенным таймингом, полностью ложится на меня, позволяя вам сфокусироваться на созерцании природы и получении ярких впечатлений.</p>
+                    <p>Выбирая SnovaVtur, вы доверяете отдых человеку, знающему каждый поворот горных серпантинов. Дагестан открывается по-настоящему лишь тем, кто ценит его масштаб и спокойствие. С каждой поездкой вы будете узнавать республику с новой стороны, открывая скрытые жемчужины региона. Приглашаю отправиться в путь, чтобы вместе создать историю, которая останется с вами в самых теплых воспоминаниях</p>
+                </div>
+                <div class="qs-text2">
+                    <h1>Популярные вопросы</h1>
+                    <div class="accordion">
+                      <div class="accordion-header">
+                        <span>Безопасно ли отдыхать в Дагестане?</span>
+                        <div class="icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <p>Да, в Дагестане абсолютно безопасно для туристов. Республика активно развивается как туристический центр, и к гостям здесь относятся с традиционным кавказским радушием и гостеприимством. Главное правило — проявлять уважение к местным традициям, обычаям и культуре. Как и в любом другом месте, достаточно соблюдать элементарные нормы приличия, чтобы ваш отдых прошел комфортно.</p>
+                      </div>
+                    </div>
+                    <div class="accordion">
+                      <div class="accordion-header">
+                        <span>Как одеваться туристам (особенно женщинам)?</span>
+                        <div class="icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <p>Дагестан — республика с сильными традициями. В городах (Махачкала, Дербент) дресс-код достаточно свободный, но стоит избегать чрезмерно откровенных нарядов (мини-юбки, глубокое декольте, прозрачные ткани). <br>
+
+• Для женщин: при посещении мечетей и горных сел желательно иметь при себе легкий платок и одежду, закрывающую плечи и колени. <br>
+
+• Для мужчин: не рекомендуется ходить в общественных местах с обнаженным торсом или в очень коротких шортах.</p>
+                      </div>
+                    </div>
+                    <div class="accordion">
+                      <div class="accordion-header">
+                        <span>Какой сезон лучше выбрать для поездки?</span>
+                        <div class="icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <p>Все зависит от цели вашей поездки. <br>
+
+• С мая по сентябрь — идеальное время для поездок в горы, трекинга и посещения знаковых мест, так как в горах устанавливается комфортная погода. <br>
+
+• Июнь – август — время для пляжного отдыха на Каспийском море. <br>
+
+• Весна и осень — лучшее время для экскурсионных туров, когда не слишком жарко и можно насладиться красивыми пейзажами без летнего зноя.</p>
+                      </div>
+                    </div>
+                    <div class="accordion">
+                      <div class="accordion-header">
+                        <span>Нужна ли специальная одежда для поездки в горы?</span>
+                        <div class="icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <p>Даже если в Махачкале жарко, в горах погода очень переменчива. Обязательно возьмите с собой: <br>
+
+• Удобную закрытую обувь (кроссовки или треккинговые ботинки с хорошим протектором). <br>
+
+• Ветровку или легкую куртку (на высоте часто дуют ветра и бывают прохладные вечера). <br>
+
+• Головной убор и солнцезащитные очки.</p>
+                      </div>
+                    </div>
+                    <div class="accordion">
+                      <div class="accordion-header">
+                        <span>Как обстоят дела с мобильной связью и интернетом?</span>
+                        <div class="icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <p>В городах и популярных туристических локациях мобильная связь и интернет работают стабильно. Однако в глубоких горных районах и ущельях связь может пропадать или работать с перебоями. Рекомендуем заранее скачать офлайн-карты и предупредить близких о возможных перерывах в общении, если вы планируете уезжать далеко от цивилизации.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questions-div2">
+                <div class="poloska"></div>
+                <p>если у вас остались вопросы - позвоните или напишите нам</p>
+                <a href="tel:+79894733754">8 989 473 37 54</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-div1">
+            <h1>SnovaVtur</h1>
+            <p>Твой надежный гид по самым сокровенным уголкам Дагестана. Мы создаем моменты, которые остаются в памяти навсегда.</p>
+        </div>
+        <div class="footer-div2">
+            <h1>наши соц-сети</h1>
+            <div>
+                <a href="https://t.me/Gabbar_Han" target="_blank" class="mess">telegram</a>
+                <a href="https://wa.me/79894733754" target="_blank" class="mess">whatsapp</a>
+                <a href="https://max.ru/u/f9LHodD0cOI4b3SwYSdN_EWwCpvfoghLmBJbnFuvf1nrCDXVqdGEyd-Ysb4" target="_blank" class="mess">max</a>
+                <a href="https://www.instagram.com/snova_v_tur" target="_blank" class="mess">instagram</a>
+                <a href="tel:+79894733754" class="number">8 989 473 37 54</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно заявки -->
+    <div class="modal-overlay" id="bookingModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
+        <h2 id="bookingTitle">Заявка на бронирование</h2>
+        <p class="modal-sub">Оставьте заявку — мы подберём даты, ответим на вопросы и забронируем вам места.</p>
+        <form id="bookingForm" novalidate>
+          <p class="modal-error" id="bookingError">Заполните имя и контакты, чтобы мы могли с вами связаться.</p>
+          <label>
+            <span>Ваше имя</span>
+            <input type="text" name="name" placeholder="Иван" required>
+          </label>
+          <label>
+            <span>Телефон или Telegram</span>
+            <input type="text" name="contact" placeholder="+7 900 000-00-00" required>
+          </label>
+          <label>
+            <span>Тур или экскурсия</span>
+            <select name="tour">
+              <option value="">Выберите маршрут</option>
+              <option>5-дневный классический тур</option>
+              <option>Экспресс-тур в Дагестан (3 дня)</option>
+              <option>Горы и море (7 дней)</option>
+              <option>Молодёжный тур (5 дней)</option>
+              <option>Экскурсия: Дербент и экраноплан Лунь</option>
+              <option>Экскурсия: Гоор и Язык Тролля</option>
+              <option>Экскурсия: Самурский лес и Хучнинский водопад</option>
+              <option>Экскурсия: Сулакский каньон и бархан Сарыкум</option>
+              <option>Экскурсия: Хунзах, Матлас и водопады</option>
+              <option>Экскурсия: Экскурсия по Махачкале</option>
+            </select>
+          </label>
+          <div class="modal-row">
+            <label>
+              <span>Дата поездки</span>
+              <input type="date" name="date">
+            </label>
+            <label>
+              <span>Человек</span>
+              <input type="number" name="people" min="1" max="20" placeholder="1">
+            </label>
+          </div>
+          <label>
+            <span>Комментарий</span>
+            <textarea name="comment" rows="3" placeholder="Ваши пожелания и вопросы"></textarea>
+          </label>
+          <button type="submit" class="modal-submit">Отправить заявку</button>
+          <p class="modal-success" id="bookingSuccess">Спасибо! Ваша заявка принята — мы свяжемся с вами в ближайшее время.</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
