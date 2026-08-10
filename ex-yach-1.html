@@ -6,6 +6,7 @@
     <title>Дербент и экраноплан Лунь — SnovaVtur</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="yach-css/ex-yach-1.css" />
+    <link rel="stylesheet" href="modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,7 +40,8 @@
       <div class="header-div1">
         <a href="index.html#turi">туры</a
         ><a href="index.html#questions">вопросы</a
-        ><a href="index.html#footer">контакты</a>
+        ><a href="index.html#footer">контакты</a
+        ><a href="#" data-booking-open>заявка</a>
       </div>
       <div class="header-div2">
         <a href="https://wa.me/79894733754" target="_blank"
@@ -288,9 +290,12 @@
             Оставьте заявку или напишите нам в мессенджер — подскажем по датам,
             трансферу и свободным местам.
           </p>
-          <a href="https://wa.me/79894733754" target="_blank"
-            >связаться с нами</a
-          >
+          <div class="cta-actions">
+            <a href="https://wa.me/79894733754" target="_blank"
+              >связаться с нами</a
+            >
+            <a href="#" data-booking-open>оставить заявку</a>
+          </div>
         </div>
       </section>
     </main>
@@ -324,5 +329,58 @@
       </div>
     </footer>
     <script src="yach-js/ex-yach-1.js"></script>
+    <!-- Модальное окно заявки -->
+    <div class="modal-overlay" id="bookingModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
+        <h2 id="bookingTitle">Заявка на бронирование</h2>
+        <p class="modal-sub">Оставьте заявку — мы подберём даты, ответим на вопросы и забронируем вам места.</p>
+        <form id="bookingForm" novalidate>
+          <p class="modal-error" id="bookingError">Заполните имя и контакты, чтобы мы могли с вами связаться.</p>
+          <label>
+            <span>Ваше имя</span>
+            <input type="text" name="name" placeholder="Иван" required>
+          </label>
+          <label>
+            <span>Телефон или Telegram</span>
+            <input type="text" name="contact" placeholder="+7 900 000-00-00" required>
+          </label>
+          <label>
+            <span>Тур или экскурсия</span>
+            <select name="tour">
+              <option value="">Выберите маршрут</option>
+              <option>5-дневный классический тур</option>
+              <option>Экспресс-тур в Дагестан (3 дня)</option>
+              <option>Горы и море (7 дней)</option>
+              <option>Молодёжный тур (5 дней)</option>
+              <option>Экскурсия: Дербент и экраноплан Лунь</option>
+              <option>Экскурсия: Гоор и Язык Тролля</option>
+              <option>Экскурсия: Самурский лес и Хучнинский водопад</option>
+              <option>Экскурсия: Сулакский каньон и бархан Сарыкум</option>
+              <option>Экскурсия: Хунзах, Матлас и водопады</option>
+              <option>Экскурсия: Экскурсия по Махачкале</option>
+            </select>
+          </label>
+          <div class="modal-row">
+            <label>
+              <span>Дата поездки</span>
+              <input type="date" name="date">
+            </label>
+            <label>
+              <span>Человек</span>
+              <input type="number" name="people" min="1" max="20" placeholder="1">
+            </label>
+          </div>
+          <label>
+            <span>Комментарий</span>
+            <textarea name="comment" rows="3" placeholder="Ваши пожелания и вопросы"></textarea>
+          </label>
+          <button type="submit" class="modal-submit">Отправить заявку</button>
+          <p class="modal-success" id="bookingSuccess">Спасибо! Ваша заявка принята — мы свяжемся с вами в ближайшее время.</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
   </body>
 </html>
